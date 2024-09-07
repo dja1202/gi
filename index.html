@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Stacey's Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#" id="home-link" onclick="showSection('home')">HOME</a></li>
+          <li><a href="#" id="about-link" onclick="showSection('about')">ABOUT</a></li>
+          <li><a href="Resume.pdf" id="resume-link" target="_blank" onclick="setActiveLink('resume')">RESUME</a></li>
+          <li><a href="#" id="contact-link" onclick="showSection('contact')">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="section">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title"> Stacey Uhm </h1>
+          <p class="description">
+            A beginner in UX/UI design and Web devolper, eager to learn and grow in the field. With a strong interest in media and interaction design, I am committed to honing my abilities and developing a deep understanding of how to create designs that truly resonate with users!
+          </p>
+        </div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+      </div>
+
+    <section id="projects" class="projects">
+      <div class="project1">
+        <div class="circle-blur1"></div>
+        <a href="https://cauh1028.wixsite.com/collegescheduler" target="_blank">
+          <img src="images/project-1.jpg" alt="Project 1" class="project__image" />
+        </a>
+        <div class="project__description">
+          <h1 class="title">CollegeIt</h1>
+          <p class="description">
+            Developed a College Scheduler and To-Do List app using Java, Kotlin, and Gradle in Android Studio, with SQLiteDB for data storage, enabling users to efficiently manage schedules and tasks within a streamlined interface
+          </p>
+        </div>
+      </div>
+      <div class="project2">
+        <div class="circle-blur2"></div>
+        <a href="https://1memetu1.wixsite.com/my-site-2" target="_blank">
+          <img src="images/project-2.jpg" alt="Project 2" class="project__image" />
+        </a>
+        <div class="project__description">
+          <h1 class="title">A-SPOT_IT</h1>
+          <p class="description">
+            Developed a Spotify Wrapped application using Android Studio, integrating the Spotify API with our design to provide a summarized view of user data."
+          </p>
+        </div>
+      </div>
+    </section>
+      
+    </section>
+
+    <section id="about" class="section" style="display: none;">
+      <div class="about_container">
+        <div class="about__content">
+          <img src="images/my-photo.jpg" alt="Stacey Uhm" class="about__image" />
+          <div class="about__description">
+            <h1 class="title">About Me</h1>
+            <p class="description">
+              My name is Stacey Uhm, and I am an undergraduate student in Georgia Tech, majoring in computational media, with a thread of media and interaction design. Though I’m a beginner, I’m incredibly eager to learn and apply my skills to real-world projects!
+            </p>
+            <p class="description">
+              I approach every new opportunity with an open mind and a deep curiosity, always striving to better understand users' needs and translate that into thoughtful, impactful designs. 
+            </p>
+            <p class="description">
+              When I’m not designing, you can find me enjoying a cup of matcha, reading webtoons, or traveling the world. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="contact" class="section" style="display: none;">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title">Feel free to connect with me through the following platforms:</h1>
+          <div class="social-links">
+            <a href="https://github.com/dja1202" target="_blank" class="social-link">
+              <img src="images/github-icon.png" alt="GitHub" class="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/stacey-uhm-a00213250" target="_blank" class="social-link">
+              <img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon" />
+            </a>
+            <a href="https://www.instagram.com/dja_tjwn" target="_blank" class="social-link">
+              <img src="images/instagram-icon.png" alt="Instagram" class="social-icon" />
+            </a>
+          </div>
+          <p class="description">
+            I would love to connect and collaborate on exciting projects with you!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 made by Stacey Uhm</p>
+    </footer>
+
+    <script>
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+          section.style.display = 'none';
+        });
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+          selectedSection.style.display = 'block';
+        }
+      }
+
+      // Show the "home" section by default on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        showSection('home');
+      });
+    </script>
+
+  </body>
+</html>
