@@ -24,6 +24,9 @@
           <li><a href="Resume.pdf" id="resume-link" target="_blank" onclick="setActiveLink('resume')">RESUME</a></li>
           <li><a href="#" id="contact-link" onclick="showSection('contact')">CONTACT</a></li>
         </ul>
+        <button id="mode-toggle" class="mode-button">
+          <img id="mode-icon" src="images/sun.png" alt="Toggle Light/Dark Mode">
+        </button>
       </div>
     </nav>
 
@@ -32,11 +35,9 @@
         <div class="content">
           <h1 class="title"> Stacey Uhm </h1>
           <p class="description">
-            A beginner in UX/UI design and Web devolper, eager to learn and grow in the field. With a strong interest in media and interaction design, I am committed to honing my abilities and developing a deep understanding of how to create designs that truly resonate with users!
+            A beginner in UX/UI design and Web developer, eager to learn and grow in the field. With a strong interest in media and interaction design, I am committed to honing my abilities and developing a deep understanding of how to create designs that truly resonate with users!
           </p>
         </div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
       </div>
 
     <section id="projects" class="projects">
@@ -115,26 +116,6 @@
       <p>&copy; 2024 made by Stacey Uhm</p>
     </footer>
 
-    <script>
-      function showSection(sectionId) {
-        // Hide all sections
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(function(section) {
-          section.style.display = 'none';
-        });
-
-        // Show the selected section
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-          selectedSection.style.display = 'block';
-        }
-      }
-
-      // Show the "home" section by default on page load
-      document.addEventListener('DOMContentLoaded', function() {
-        showSection('home');
-      });
-    </script>
-
+    <script src="script.js"></script>
   </body>
 </html>
